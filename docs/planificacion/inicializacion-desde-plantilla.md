@@ -68,7 +68,7 @@ plantilla. Se probó desatendido sobre el árbol del commit inicial (`2c3f410`) 
 sin residuos, `cargo build --release` en verde con el paquete renombrado, y los dos workflows y los dos
 TOML parseando.
 
-Estos arreglos están en este repo; **falta portarlos a `npiobject/DesdeMovil`**, que es la plantilla real.
+Estos arreglos están en este repo y portados a la plantilla real en el PR [npiobject/DesdeMovil#2](https://github.com/npiobject/DesdeMovil/pull/2), pendiente de revisión.
 
 1. **[CORREGIDO] La lista de ficheros a sustituir estaba incompleta.** El paso 1 del bloque a pegar nombra `app/fly.toml`, `.github/workflows/deploy.yml`, `CLAUDE.md`, `tools/aterrizar.ps1` y `tools/estado.ps1`. Faltan `app/Cargo.toml` y `app/Dockerfile`, que **sí** llevan marcador `PLANTILLA:`, y faltan tres ficheros que llevan el nombre del proyecto y **no** llevan marcador ninguno: `README.md`, `docs/index.html` y `app/src/main.rs`. Un agente que se limite a la lista deja el nombre viejo en el mock público y en la respuesta de `GET /`. → El script cubre los doce sitios y `ARRANQUE.md` los tabula, marcando cuáles no llevan marcador.
 2. **[CORREGIDO] `grep "PLANTILLA:"` no es un checklist fiable.** El propio `ARRANQUE.md` y `docs/planificacion/plantilla.md` contienen la cadena, así que el grep mezcla marcadores accionables con prosa que los menciona. Y `plantilla.md` habla de "los diez sitios" mientras su tabla lista ocho ficheros; ni el número ni la tabla cuadran con lo que devuelve el grep. → El checklist deja de ser un grep manual: lo hace el script al final, con exclusiones explícitas, y aborta si encuentra algo.
@@ -88,4 +88,4 @@ Estos arreglos están en este repo; **falta portarlos a `npiobject/DesdeMovil`**
 - **[SUPUESTO] Los scripts de PowerShell siguen sin ejecutarse.** El sandbox no tiene `pwsh`; el cambio ha sido solo de los valores por defecto de `param()`. Plan B si algo falla: pasar `-Proyecto` y `-Root` explícitos.
 - Las tres URLs de "Estado final" no se han abierto desde la sesión: el sandbox no alcanza `*.github.io` ni `*.fly.dev`. La evidencia es el `deploy-pages` del run de Pages y el `curl` del paso *Verificar /salud* del run de Fly, ambos ejecutados en el runner.
 - `actions/checkout` subido a `v5` en los dos workflows, lo que quita ese aviso de deprecación de Node 20. `actions/configure-pages@v5` sigue avisando: no hay versión posterior.
-- **Pendiente y no corregible desde aquí:** portar `tools/inicializar.sh`, el `ARRANQUE.md` reescrito y la separación `docs/plantilla/` al repo plantilla `npiobject/DesdeMovil`. Este repo no tiene acceso a él.
+- **Pendiente:** revisar y mezclar el PR [npiobject/DesdeMovil#2](https://github.com/npiobject/DesdeMovil/pull/2), que lleva `tools/inicializar.sh`, el `ARRANQUE.md` reescrito y `checkout@v5` a la plantilla real. Allí el script se probó de nuevo sobre el árbol de la propia plantilla (`--nombre CasaVerde`): sin residuos y `cargo build --release` en verde.

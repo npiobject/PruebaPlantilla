@@ -33,7 +33,7 @@ La carpeta local del PC es un espejo de solo lectura. Nunca la trates como orige
 ## Documentación
 
 - Cada documento de planificación, decisión o resumen de sesión se escribe en `docs/planificacion/` de este repo, y solo ahí se edita.
-- `docs/planificacion/` incluye documentos heredados de la plantilla `DesdeMovil` (`plan-flujo-movil*.md`, `fase0-resultado.md`, `fase3-fly.md`, `plantilla.md` y `sesiones/2026090*`). Son historial de la plantilla, no de este proyecto: se conservan como referencia y no se editan.
+- `docs/plantilla/` guarda el historial de la plantilla de origen (`DesdeMovil`). Es referencia: no se edita ni se mezcla con `docs/planificacion/`.
 - Al cerrar sesión se sube copia a Drive como fichero, sin conversión a formato Google (`disableConversionToGoogleType=true`), tanto `.md` como `.html/.png/.svg`.
 - No hay edición incremental en Drive: se vuelve a subir el fichero completo con el mismo nombre, o con sufijo de versión (`-v2`, `-v3`) si quieres conservar la copia anterior.
 

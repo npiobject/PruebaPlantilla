@@ -6,4 +6,5 @@ Proyecto creado desde la plantilla del flujo "PC arranca, móvil continúa": moc
 - Backend (Fly): https://pruebaplantilla-npi.fly.dev/ · [`/salud`](https://pruebaplantilla-npi.fly.dev/salud)
 - Reglas de trabajo para los agentes: [`CLAUDE.md`](CLAUDE.md).
 - Planificación y resultados por fase: [`docs/planificacion/`](docs/planificacion/).
-- Cómo se arranca un proyecto nuevo desde esta plantilla: [`ARRANQUE.md`](ARRANQUE.md).
+- Cómo se arranca un proyecto nuevo desde esta plantilla: [`ARRANQUE.md`](ARRANQUE.md) y [`tools/inicializar.sh`](tools/inicializar.sh).
+- Historial de la plantilla de origen: [`docs/plantilla/`](docs/plantilla/).

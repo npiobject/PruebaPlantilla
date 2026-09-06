@@ -2,8 +2,7 @@
 # Uso: pwsh -File tools\estado.ps1
 #      pwsh -File tools\estado.ps1 -Proyecto MiProyecto -Root 'D:\dev\MiProyecto'
 param(
-  # PLANTILLA: cambia este valor por defecto al clonar la plantilla.
-  [string]$Proyecto = 'DesdeMovil',
+  [string]$Proyecto = 'PruebaPlantilla',
 
   [string]$Root = (Join-Path $env:USERPROFILE "C - Desarrollo\$Proyecto"),
   [string]$Rama = 'main'

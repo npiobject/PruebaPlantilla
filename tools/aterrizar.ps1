@@ -3,8 +3,7 @@
 #      pwsh -File tools\aterrizar.ps1 -Proyecto MiProyecto -Owner miusuario
 #      pwsh -File tools\aterrizar.ps1 -Root 'D:\dev\MiProyecto'
 param(
-  # PLANTILLA: cambia estos dos valores por defecto al clonar la plantilla.
-  [string]$Proyecto = 'DesdeMovil',
+  [string]$Proyecto = 'PruebaPlantilla',
   [string]$Owner    = 'npiobject',
 
   [string]$Remote   = "https://github.com/$Owner/$Proyecto.git",
